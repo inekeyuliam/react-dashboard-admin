@@ -1,13 +1,37 @@
 import React from 'react'
-import Logo from '../../img/logo.png'
+import Logo from '../../images/logo.png'
 import './Sidebar.css'
+import { SidebarData } from '../../data/data'
+import { UilSignOutAlt } from '@iconscout/react-unicons'
+import { useState } from 'react'
 const Sidebar = () => {
+const [selected, setSelected] = useState(0)
   return (
 	<div className="Sidebar">
 		{/* logo */}
 		<div className="logo">
-			<img src="" alt="" />
-			<span></span>
+			<img src={Logo} alt="" />
+			<span>
+				Sh<span>o</span>ps
+			</span>
+		</div>
+
+		{/* menu */}
+		<div className="menu">
+			{
+				SidebarData.map((item, index)=>{
+					return (
+						<div className={selected===index? 'menuItem active' : 'menuItem'}
+						key={index} onClick={() => setSelected(index)}>
+							<item.icon/>
+							<span>{item.heading}</span>
+						</div>
+					)
+				})
+			}
+			<div className="menuItem">
+				<UilSignOutAlt/>
+			</div>
 		</div>
 	</div>
   )
