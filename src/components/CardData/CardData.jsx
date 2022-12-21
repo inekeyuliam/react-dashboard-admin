@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { AnimateSharedLayout } from 'framer-motion'
 import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import './CardData.css'
 const CardData = (props) => {
 	const [expanded, setExpanded] = useState(false )
@@ -25,7 +26,10 @@ function CompactCard({param}){
 	const Png = param.png
 	const percentage = param.barValue
 	return (
-		<div className="compact-card">
+		<div className="compact-card" style={{
+			background: param.color.backGround,
+			boxShadow: param.color.boxShadow
+		}}>
 			<div className="radial-bar">
 				<CircularProgressbar 
 				value={percentage} 
