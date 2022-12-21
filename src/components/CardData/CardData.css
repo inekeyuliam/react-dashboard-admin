@@ -9,7 +9,7 @@
 	padding: 1rem;
 }
 .compact-card:hover{
-	box-shadow: none;
+	box-shadow: none !important;
 }
 
 .radial-bar{
@@ -46,4 +46,27 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-end;
+}
+
+.detail>span:nth-child(2){
+	font-size: 22px;
+	font-weight: bold;
+}
+.detail>span:nth-child(3){
+	font-size: 12px;
+}
+
+/* expandable card */
+.expanded-card{
+	position: absolute;
+	width: 60%;
+	height: 70vh;
+	z-index: 9;
+	left: 13rem;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
 }
