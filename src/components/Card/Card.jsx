@@ -4,6 +4,7 @@ import CardData from '../CardData/CardData'
 import './Card.css'
 const Card = () => {
   return (
+	
 	<div className="Cards">
 		{cardsData.map((card,id) => {
 			return (
