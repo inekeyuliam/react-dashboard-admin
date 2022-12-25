@@ -20,7 +20,7 @@ const sidebarVariants = {
   return (
 	<>
 	<div className='bars'
-	 style={expanded? {left: '5%', zIndex:'10', background:'transparent'} : {left:'5%'} }
+	 style={expanded? { top:'4.2rem', zIndex:'10'} : {top:'3.8rem' ,zIndex:'9'} }
 	 onClick={() => setExpanded(!expanded)}
 	 >
 		<UilBars/>

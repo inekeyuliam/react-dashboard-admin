@@ -89,6 +89,11 @@
 		display: flex;
 		
 	}
+	.logo>img{
+		height: 2rem;
+		width: 2rem;
+		margin-left: 2.2rem;
+	}
 	.menu .menuItem:last-child{
 		position: relative;
 		margin-top: 6rem;
@@ -96,9 +101,8 @@
 	.bars{
 		display: flex;
 		position: fixed;
-		top: 3.5rem;
+		top: 3.8rem;
 		z-index: 9;
-		background: #ffe0e0;
 		padding: 10px;
 		border-radius: 10px;
 
